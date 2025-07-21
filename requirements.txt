@@ -1,0 +1,17 @@
+# Placeholder file
+
+
+
+cd C:\Users\Admin\Desktop\realtime-anomaly-detection\deployment
+docker compose up -d spark
+docker compose up -d zookeeper kafka
+docker compose up -d dashboard
+
+cd C:\Users\Admin\Desktop\realtime-anomaly-detection
+python kafka\producer.py
+
+
+cd C:\Users\Admin\Desktop\realtime-anomaly-detection\deployment
+docker compose logs -f kafka
+
+http://localhost:8501/#recent-anomalies

@@ -11,36 +11,11 @@ git clone https://github.com/<your-username>/realtime-anomaly-detection.git
 
 cd realtime-anomaly-detection
 
-3. Start Required Services
-Navigate to the deployment directory and spin up the core services using Docker Compose:
-
-cd deployment
-
-**Start Apache Spark**  
-
-docker compose up -d spark  
-
-**Start Zookeeper & Kafka**  
-
-docker compose up -d zookeeper kafka  
-
-**Start Dashboard service**  
-
-docker compose up -d dashboard
-
-4. Run Kafka Producer
-From the project root directory, start the Kafka producer:
-
-cd kafka  
-
-python producer.py
-
-6. Monitor Kafka Logs
-To check real-time Kafka logs:
-
-cd deployment  
-
-docker compose logs -f kafka
+2. Start Required Services
+Navigate to the deployment directory and spin up the core services using Docker Compose.
+Apache Spark → Handles distributed data processing and anomaly detection logic.
+Zookeeper & Kafka → Provide reliable message streaming and coordination.
+Dashboard → Visualizes detected anomalies and system status.
 
 # 📌 Guidelines
 Follow PEP8 coding standards for Python.  

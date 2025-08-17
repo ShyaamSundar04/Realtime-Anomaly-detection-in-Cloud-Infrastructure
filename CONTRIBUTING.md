@@ -8,41 +8,53 @@ We welcome contributions of all kinds — bug reports, documentation improvement
 # 🛠️ Getting Started
 1. Fork and Clone the Repository
 git clone https://github.com/<your-username>/realtime-anomaly-detection.git
+
 cd realtime-anomaly-detection
 
-2. Start Required Services
+3. Start Required Services
 Navigate to the deployment directory and spin up the core services using Docker Compose:
+
 cd deployment
-**Start Apache Spark**
-docker compose up -d spark
-**Start Zookeeper & Kafka**
-docker compose up -d zookeeper kafka
-**Start Dashboard service**
+
+**Start Apache Spark**  
+
+docker compose up -d spark  
+
+**Start Zookeeper & Kafka**  
+
+docker compose up -d zookeeper kafka  
+
+**Start Dashboard service**  
+
 docker compose up -d dashboard
 
-3. Run Kafka Producer
+4. Run Kafka Producer
 From the project root directory, start the Kafka producer:
-cd kafka
+
+cd kafka  
+
 python producer.py
 
-4. Monitor Kafka Logs
+6. Monitor Kafka Logs
 To check real-time Kafka logs:
-cd deployment
+
+cd deployment  
+
 docker compose logs -f kafka
 
 # 📌 Guidelines
-Follow PEP8 coding standards for Python.
-Write descriptive commit messages (use the imperative mood, e.g., "Add anomaly detection module").
-Keep pull requests small and focused.
-Update documentation (README/CONTRIBUTING) if your changes affect usage.
+Follow PEP8 coding standards for Python.  
+Write descriptive commit messages (use the imperative mood, e.g., "Add anomaly detection module").  
+Keep pull requests small and focused.  
+Update documentation (README/CONTRIBUTING) if your changes affect usage.  
 Add comments for clarity in complex logic.
 
 # Reporting Issues
-If you find a bug or have a feature request, please open an Issue on GitHub with:
-Clear title and description
-Steps to reproduce (if it’s a bug)
+If you find a bug or have a feature request, please open an Issue on GitHub with:  
+Clear title and description  
+Steps to reproduce (if it’s a bug)  
 Logs, screenshots, or error messages (if applicable)
 
 # 📄 License
-By contributing, you agree that your contributions will be licensed under the same terms as this project: MIT License.
+By contributing, you agree that your contributions will be licensed under the same terms as this project: MIT License.  
 ⚡ Thank you for helping improve Realtime Anomaly Detection! Every contribution, no matter how small, makes a difference.
